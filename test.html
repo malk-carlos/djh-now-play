@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h2>https://lokeshdhakar.com/projects/color-thief/<h2>
+<img id="thumbnail" src="./maxresdefault (1).jpeg" width=30% height=30% crossorigin="anonymous" />
+<label id="label1">Do you like Train?</label>
+<img id="scene" src="./maxresdefault (1).jpeg" width=40% height=40% crossorigin="anonymous" />
+<label id="label2">So beautiful.</label>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+<script>
+    const colorThief = new ColorThief();
+    const img1 = document.querySelector('img#thumbnail');
+    var color;
+    // Make sure image is finished loading
+    if (img1.complete) {
+      color = colorThief.getColor(img1);
+    } else {
+      image.addEventListener('load', function() {
+        color = colorThief.getColor(img1);
+      });
+    }
+    var rbg = color[0] + "," + color[1] + "," + color[2];
+    console.log
+    document.getElementById("label1").style.color = "rgb("+ rbg +")" ;//機関車の画像の色
+    console.log(color)
+
+
+    const img2 = document.querySelector('img#scene');
+    if (img2.complete) {
+      color = colorThief.getColor(img2);
+    } else {
+      image.addEventListener('load', function() {
+        color = colorThief.getColor(img2);
+      });
+    }
+    rbg = color[0] + "," + color[1] + "," + color[2];
+    document.getElementById("label2").style.color = "rgb("+ rbg +")" ; //レモンの画像の色
+</script>
+</body>
+</html>
