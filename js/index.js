@@ -29,10 +29,6 @@ function contents() {
         imageURL = "https://img.youtube.com/vi/" + customs.values[0][1] + "/maxresdefault.jpg";
         console.log(imageURL)
         img1.src = googleProxyURL + imageURL;
-
-        console.log(googleProxyURL + imageURL)
-
-
     })
     document.getElementById('thumbnail').addEventListener("load", colorchange);
 }
