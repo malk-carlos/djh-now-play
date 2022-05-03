@@ -24,31 +24,11 @@ function contents() {
 
     })
 
-
+    
 }
 
-function color() {
-    const colorThief = new ColorThief();
-    const img1 = document.querySelector('img#thumbnail');
-    var color;
-    // Make sure image is finished loading
-    if (img1.complete) {
-        color = colorThief.getColor(img1);
-    } else {
-        image.addEventListener('load', function () {
-            color = colorThief.getColor(img1);
-        });
-    }
-    var rbg = color[0] + "," + color[1] + "," + color[2];
-    console.log
-    document.getElementById("label1").style.color = "rgb(" + rbg + ")";//機関車の画像の色
-    console.log(color)
-}
 
 contents()
-setTimeout(() => {
-    color()
-}, 2000);
 
 
 
