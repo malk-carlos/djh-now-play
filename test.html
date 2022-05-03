@@ -1,42 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
 </head>
+
 <body>
 
-<h2>https://lokeshdhakar.com/projects/color-thief/<h2>
-<img id="img" class="img" src="./maxresdefault (1).jpeg" width=30% height=30% crossorigin="anonymous" />
-<label id="label1">Do you like Train?</label>
-<img id="scene" src="./maxresdefault (1).jpeg" width=40% height=40% crossorigin="anonymous" />
-<label id="label2">So beautiful.</label>
+    <h2>https://lokeshdhakar.com/projects/color-thief/
+        <h2>
+            <img id="img" class="img" src="./maxresdefault (1).jpeg" width=30% height=30% crossorigin="anonymous" />
+            <label id="label1">Do you like Train?</label>
+            <img id="scene" src="./maxresdefault (1).jpeg" width=40% height=40% crossorigin="anonymous" />
+            <label id="label2">So beautiful.</label>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
-<script>
-const colorThief = new ColorThief();
-const img1 = document.getElementById("img");
-let color
-
-
-
-let imageURL = 'https://i.pinimg.com/564x/3b/b4/9b/3bb49bd2a7f86e29b5670da1fe03fee4.jpg';
-let googleProxyURL = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
-
-img1.crossOrigin = 'Anonymous';
-img1.src = googleProxyURL + encodeURIComponent(imageURL);
-
-if (img1.complete) {
-      color = colorThief.getColor(img1);
-    } else {
-      image.addEventListener('load', function() {
-        color = colorThief.getColor(img1);
-      });
-    }
-    var rbg = color[0] + "," + color[1] + "," + color[2];
-    document.getElementById("label1").style.color = "rgb("+ rbg +")" ;//機関車の画像の色
-
-
-console.log(color)
-</script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+            <script>
+                console.log(color)
+            </script>
 </body>
+
 </html>

@@ -19,7 +19,7 @@ body {
 
 #body1 {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -47,6 +47,10 @@ body {
     z-index: 0;
 }
 
+a {
+    color: white;
+}
+
 .icom {
     height: 300px;
     animation: 5s linear infinite rotation;
@@ -59,4 +63,48 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+/* ローディング画面 */
+
+#loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: #0bd;
+    /* 以下のコードを追加 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#loading img {
+    margin-top: 15vw;
+    animation: 5s linear rotation2 infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes rotation2 {
+    0% {
+        transform: rotate(0) translateY(-100vw) scale(1);
+        ;
+    }
+    20% {
+        transform: rotate(0) translateY(0) scale(1);
+    }
+    80% {
+        transform: rotate(1280deg) scale(1);
+    }
+    100% {
+        transform: rotate(3290deg) scale(1);
+        opacity: 1;
+    }
+}
+
+.loaded {
+    transform: rotate(0) scale(4) translateY(25vw);
+    opacity: 0;
+    visibility: hidden;
 }
