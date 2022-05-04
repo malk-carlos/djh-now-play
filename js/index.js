@@ -49,6 +49,6 @@ window.onload = function() {
     setTimeout(() => {
         const spinner = document.getElementById('loading');
         spinner.classList.add('loaded');
-    }, 500);
+    }, 600);
 
 }
