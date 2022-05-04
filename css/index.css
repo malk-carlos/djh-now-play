@@ -1,110 +1,169 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-}
-
-#canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #04BBD3;
-}
-
-#body1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-#body2 {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-#body3 {
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translate(50%, -50%);
-    -webkit-transform: translate(50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-a {
-    color: white;
-}
-
-.icom {
-    height: 300px;
-    animation: 5s linear infinite rotation;
-}
-
-@keyframes rotation {
-    0% {
-        transform: rotate(0);
+    @media screen and (min-width: 960px) {
+        /* 960px以上に適用されるCSS（PC用） */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #04BBD3;
+        }
+        #body0 {
+            display: none;
+        }
+        #body1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        #body2 {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        #body3 {
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translate(50%, -50%);
+            -webkit-transform: translate(50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .icom {
+            height: 300px;
+            animation: 5s linear infinite rotation;
+        }
+        .iframe-wrapper iframe {
+            width: 640px;
+            height: 360px;
+        }
     }
-    100% {
-        transform: rotate(360deg);
+    
+    @media screen and (max-width: 959px) {
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+        /* 480px以下に適用されるCSS（スマホ用） */
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #04BBD3;
+        }
+        #body1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        #body2 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        #body3 {
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        .icom {
+            height: 100px;
+            animation: 5s linear infinite rotation;
+        }
+        .iframe-wrapper iframe {
+            width: 320px;
+            height: 180px;
+        }
     }
-}
-
-
-/* ローディング画面 */
-
-#loading {
-    width: 100vw;
-    height: 100vh;
-    transition: all 1s;
-    background-color: #0bd;
-    /* 以下のコードを追加 */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
-
-#loading img {
-    margin-top: 15vw;
-    animation: 5s linear rotation2 infinite;
-    animation-timing-function: ease-in;
-}
-
-@keyframes rotation2 {
-    0% {
-        transform: rotate(0) translateY(-100vw) scale(1);
-        ;
+    /* ローディング画面 */
+    
+    #loading {
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+        background-color: #0bd;
+        /* 以下のコードを追加 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
     }
-    20% {
-        transform: rotate(0) translateY(0) scale(1);
+    
+    #loading img {
+        margin-top: 15vw;
+        animation: 5s linear rotation2 infinite;
+        animation-timing-function: ease-in;
     }
-    80% {
-        transform: rotate(1280deg) scale(1);
+    
+    @keyframes rotation2 {
+        0% {
+            transform: rotate(0) translateY(-100vw) scale(1);
+            ;
+        }
+        20% {
+            transform: rotate(0) translateY(0) scale(1);
+        }
+        80% {
+            transform: rotate(1280deg) scale(1);
+        }
+        100% {
+            transform: rotate(3290deg) scale(1);
+            opacity: 1;
+        }
     }
-    100% {
-        transform: rotate(3290deg) scale(1);
-        opacity: 1;
+    
+    .loaded {
+        transform: rotate(0) scale(4) translateY(25vw);
+        opacity: 0;
+        visibility: hidden;
     }
-}
-
-.loaded {
-    transform: rotate(0) scale(4) translateY(25vw);
-    opacity: 0;
-    visibility: hidden;
-}
+    
+    @keyframes rotation {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    a {
+        color: white;
+    }
