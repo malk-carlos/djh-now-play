@@ -85,31 +85,16 @@
             -ms-transform: translate(-50%, -50%);
             z-index: 1;
         }
-        #body2 {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            z-index: 0;
-        }
+        #body2,
         #body3 {
-            position: absolute;
-            bottom: 0%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            z-index: 0;
+            display: none;
         }
         .icom {
             height: 100px;
             animation: 5s linear infinite rotation;
         }
         .iframe-wrapper iframe {
-            width: 320px;
-            height: 180px;
+            width: 90vw;
         }
     }
     /* ローディング画面 */
