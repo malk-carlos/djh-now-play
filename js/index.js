@@ -46,9 +46,16 @@ function colorchange() {
 
 contents()
 window.onload = function() {
+
+  document.addEventListener('touchmove', handle, { passive: false });
+  document.addEventListener('mousewheel', handle, { passive: false });
     setTimeout(() => {
         const spinner = document.getElementById('loading');
         spinner.classList.add('loaded');
-    }, 600);
+    }, 650);
 
+}
+
+function handle(event) {
+    event.preventDefault();
 }
