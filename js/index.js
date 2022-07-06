@@ -1,6 +1,7 @@
 let color, imageURL
 const colorThief = new ColorThief();
 const img1 = document.getElementById("thumbnail");
+const API_URL = "https://script.google.com/macros/s/AKfycbxma7wgd2RNbtxwG9fF1B3Vif7FypRQJg4oF7zsT3Xi__Ne5577X1dh61fjsmKcJ7xA/exec";
 let googleProxyURL = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
 img1.crossOrigin = 'Anonymous';
 
@@ -35,20 +36,15 @@ function contents() {
 
 function colorchange() {
     color = colorThief.getColor(img1);
-    var rbg = color[0] + "," + color[1] + "," + color[2];
-    document.getElementById("canvas").style.background = "rgb(" + rbg + ")"; //背景の色変更
+    var rgb = color[0] + "," + color[1] + "," + color[2];
+    $("canvas").css("background-color",`rgb(${rgb})`) // 背景色の変更
 }
-
-
-
-
-
 
 contents()
 window.onload = function() {
 
-  document.addEventListener('touchmove', handle, { passive: false });
-  document.addEventListener('mousewheel', handle, { passive: false });
+    // document.addEventListener('touchmove', handle, { passive: false });
+    // document.addEventListener('mousewheel', handle, { passive: false });
     setTimeout(() => {
         const spinner = document.getElementById('loading');
         spinner.classList.add('loaded');
@@ -59,3 +55,32 @@ window.onload = function() {
 function handle(event) {
     event.preventDefault();
 }
+/* ランキングAPI呼び出し
+$(function () {
+    $.ajax({
+        type: "GET",
+        url: API_URL,
+        dataType: "json",
+    })
+    .done((data, textStatus, jqXHR) => {
+        // APIの呼び出しが成功した場合
+        data.forEach((v) => {
+        // tr要素の作成
+        const $ul = $("<ul></ul>");
+
+        // 各項目の設定
+        $(`<li>${v.rank}位</li>`).appendTo($ul);
+        $(`<li><img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
+        $(`<li><a href="https://youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer">${v.name}</a></li>`).appendTo($ul);
+        $(`<li>${v.count}回</li>`).appendTo($ul);
+
+        // 要素の追加
+        $("#container").append($ul);
+        });
+    })
+    .fail((jqXHR, textStatus, errorThrown) => {
+        // APIの呼び出しが失敗した場合
+        alert(JSON.stringify(jqXHR.responseJSON, null, 2));
+    });
+});
+*/
