@@ -55,8 +55,9 @@ window.onload = function() {
 function handle(event) {
     event.preventDefault();
 }
-/* ランキングAPI呼び出し
-$(function () {
+
+//  ランキングAPI呼び出し
+$(function() {
     $.ajax({
         type: "GET",
         url: API_URL,
@@ -65,12 +66,12 @@ $(function () {
     .done((data, textStatus, jqXHR) => {
         // APIの呼び出しが成功した場合
         data.forEach((v) => {
-        // tr要素の作成
+        // ul要素の作成
         const $ul = $("<ul></ul>");
 
         // 各項目の設定
         $(`<li>${v.rank}位</li>`).appendTo($ul);
-        $(`<li><img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
+        $(`<li class="thli"><img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
         $(`<li><a href="https://youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer">${v.name}</a></li>`).appendTo($ul);
         $(`<li>${v.count}回</li>`).appendTo($ul);
 
@@ -83,4 +84,3 @@ $(function () {
         alert(JSON.stringify(jqXHR.responseJSON, null, 2));
     });
 });
-*/
