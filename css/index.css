@@ -8,6 +8,13 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
+a {
+    color: white;
+}
+
+p {
+    text-shadow: 1px 1px 0 #fff8, 0 0 3px #fff8;
+}
 #canvas {
     position: fixed;
     top: 0;
@@ -58,7 +65,7 @@ body {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: 999;
 }
 #body3 {
     position: absolute;
@@ -67,7 +74,7 @@ body {
     transform: translate(50%, -50%);
     -webkit-transform: translate(50%, -50%);
     -ms-transform: translate(50%, -50%);
-    z-index: 0;
+    z-index: 999;
 }
 .icom {
     height: 300px;
@@ -79,56 +86,98 @@ body {
 }
 .ad{ /* 広告 */
     position: sticky;
-    width: 100%;
+    /* width: 100%; */
     /* height: 20px; */
 }
 .ad img {
     width: 30%;
     height: auto;
 }
-#body5{ /* ランキング */
+#body5 { /* ランキング */
     position: sticky;
     width: 100%;
-    height: 500px
+    /* height: 500px; */
+    /* overflow-y: scroll; */
+    vertical-align: middle;
+    text-align: left;
+    margin-top: 50px;
+}
+#body5 h2 {
+    /* width: 50%; */
+    display: inline-block;
+    margin: auto 30% auto 25%;
+}
+#body5 button {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+#body5 button:active {
+    opacity: 0.5;
 }
 #container {
     text-align: left;
+    width: 50%;
     margin-left: 20%;
-    margin: 50px 0 auto 20%;
+    margin: auto;
+    /* display: inline-block; */
+}
+.item {
+    margin-top: 30px;
+    width: 130%;
+}
+.hide {
+    display: none;
 }
 #container ul li {
     display: inline-block;
     text-decoration: none;
-    color: white;
     height: 50px;
     vertical-align: middle;
+    color: #fff;
+    text-shadow: 0 0 3px #fff8;
+    /* font-weight: bold; */
 }
 .thli {
     width: 5%;
     position: relative;
 }
+.name {
+    width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 20px;
+}
 .thumb {
     /* position: absolute; */
-    width: 75%;
+    width: 100%;
     height: auto;
-    transform: translateY(-10%);
+    /* transform: translateY(-10%); */
     margin-left: 10px;
 }
 #body7{ /* 再生リスト */
     position: sticky;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
 }
 #body9{ /* フォーム埋め込み */ 
     position: sticky;
     width: 100%;
-    height: 1000px;
+    /* height: 1000px; */
 }
 #form {
     width: 50%;
     height: 1000px;
     margin: auto;
     text-align: center;
+}
+#btn {
+    width: 30%;
+    height: auto;
 }
 #footer{
     position: sticky;
@@ -186,12 +235,4 @@ visibility: hidden;
 100% {
     transform: rotate(360deg);
 }
-}
-
-a {
-color: white;
-}
-
-p {
-    text-shadow: 1px 1px 0 #fff8, 0 0 3px #fff8;
 }

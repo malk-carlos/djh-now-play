@@ -16,13 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/index.css" media="screen and (min-width:960px)">
     <link rel="stylesheet" type="text/css" href="./css/mobile.css" media="screen and (max-width:960px)">
+    <link rel="stylesheet" href="./css/animation.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&amp;display=swap" rel="stylesheet">
+
     <title>Disc Jockey Hiroshima [DJH]</title>
 </head>
 
-<body>
+<body onload="listcolor()">
     <div id="loading">
         <img class="icom" src="./imgs/icon.png">
     </div>
@@ -30,7 +32,7 @@
     <canvas id="canvas">
     </canvas>
     <div id="colorthief">
-        <img id="thumbnail" class="img" src="" height=10px />
+        <img id="thumbnail" class="img" src="" height=10px>
     </div>
 
     <section id="header">
@@ -53,32 +55,35 @@
 
     </section>
     <section id="body2">
-        <div class="disc">
+        <div class="disc" onclick="location.reload();">
             <img class="icom" src="./imgs/icon.png">
         </div>
     </section>
     <section id="body3">
-        <div class="disc">
+        <div class="disc" onclick="location.reload();">
             <img class="icom" src="./imgs/icon.png">
         </div>
     </section>
 
     <!-- 広告（takeover.run） -->
     <section id="body4" class="ad">
-        <p>takeover.runの広告</p>
+        <p>Naoya Murao の広告</p>
         <a href="http://takeover.run/" target="_blank" rel="noopener noreferrer"><img src="#" alt="TAKEOVER"></a>
     </section>
 
     <!-- ランキング -->
     <section id="body5">
+        <h2>人気の楽曲</h2>
+        <button onclick="left()">&lt;</button>
+        <button onclick="right()">&gt;</button>
         <div id="container">
-
+            <!-- ここにランキングデータが入る -->
         </div>
     </section>
 
     <!-- 広告（nagito.work） -->
     <section id="body6" class="ad">
-        <p>𠮷田 文太のホームページ広告</p>
+        <p>デベロッパーの広告</p>
         <a href="https://nagito.work/" target="_blank" rel="noopener noreferrer"><img src="#" alt="nagito.work"></a>
     </section>
 
@@ -113,11 +118,14 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" frameborder="0" id="form"></iframe> -->
         
         <!-- DJHフォーム（アドレス収集のためページ遷移する / 求回避方法） -->
-        <!-- <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/formResponse" method="POST" onsubmit="submitted=true;" data-email-address="yuuta_20n1103684@nnn.ed.jp">
-            <input type="text" name="entry.628735773" id="url-field" required>
-            <input type="text" name="entry.6846665440108816524" id="mail" required>
+        <!-- <form action="https://script.google.com/macros/s/AKfycbxma7wgd2RNbtxwG9fF1B3Vif7FypRQJg4oF7zsT3Xi__Ne5577X1dh61fjsmKcJ7xA/exec" method="POST" onsubmit="submitted=true;">
+            <input type="text" name="url" id="url-field" required>
+            <input type="text" name="mail" id="mail" required>
             <input type="submit" value="done">
         </form> -->
+        <button onclick="toForm()" id="btn">
+            フォームを送信する
+        </button>
     </section>
 
     <!-- 広告（スワれる） -->

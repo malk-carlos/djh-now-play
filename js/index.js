@@ -65,22 +65,73 @@ $(function() {
     })
     .done((data, textStatus, jqXHR) => {
         // APIの呼び出しが成功した場合
-        data.forEach((v) => {
-        // ul要素の作成
-        const $ul = $("<ul></ul>");
+        // console.log(data)
+        for(let a = 0; a < 6; a ++){
+            const $hide = $(`<div id='item${String(a)}' class='item hide'></div>`)
+            const $show = $(`<div id='item${String(a)}' class='item show'></div>`)
+            for(let i = 0; i < 5; i ++){
+                if(a == 0){
+                    var n = a * 5 + i;
+                    const $ul = $(`<ul class="ul${String(i)}"></ul>`);
+                    $ul.appendTo($show)
+                    // 各項目の設定
+                    $(`<li>${data[n].rank}位</li>`).appendTo($ul);
+                    $(`<li class="thli"><img src="https://i.ytimg.com/vi/${data[n].id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
+                    $(`<li class="name"><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></li>`).appendTo($ul);
 
-        // 各項目の設定
-        $(`<li>${v.rank}位</li>`).appendTo($ul);
-        $(`<li class="thli"><img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
-        $(`<li><a href="https://youtube.com/watch?v=${v.id}" target="_blank" rel="noopener noreferrer">${v.name}</a></li>`).appendTo($ul);
-        $(`<li>${v.count}回</li>`).appendTo($ul);
+                    // 要素の追加
+                    $("#container").append($show);
+                } else {
+                    var n = a * 5 + i;
+                    const $ul = $(`<ul class="ul${String(i)}"></ul>`);
+                    $ul.appendTo($hide)
+                    // 各項目の設定
+                    $(`<li>${data[n].rank}位</li>`).appendTo($ul);
+                    $(`<li class="thli"><img src="https://i.ytimg.com/vi/${data[n].id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
+                    $(`<li class="name"><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></li>`).appendTo($ul);
 
-        // 要素の追加
-        $("#container").append($ul);
-        });
+                    // 要素の追加
+                    $("#container").append($hide);
+                }
+            }
+        }
+
+        listcolor()
     })
     .fail((jqXHR, textStatus, errorThrown) => {
         // APIの呼び出しが失敗した場合
         alert(JSON.stringify(jqXHR.responseJSON, null, 2));
     });
 });
+ 
+function toForm() {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform', '_blank')
+}
+
+function left() {
+    var now = $(".show").attr("id").replace("item","");
+    now = Number(now)
+
+    if(now - 1 >= 0) {
+        $(".item").removeClass("lin lout rin rout")
+        $(`#item${now-1}`).addClass("show lin")
+        $(`#item${now-1}`).removeClass("hide")
+        $(`#item${now}`).removeClass("show")
+        $(`#item${now}`).addClass("hide")
+    }
+    console.log(now)
+}
+
+function right() {
+    var now = $(".show").attr("id").replace("item","");
+    now = Number(now)
+
+    if(now + 1 <= 5) {
+        $(".item").removeClass("lin lout rin rout")
+        $(`#item${now+1}`).addClass("show rin")
+        $(`#item${now+1}`).removeClass("hide")
+        $(`#item${now}`).removeClass("show")
+        $(`#item${now}`).addClass("hide")
+    }
+    console.log(now)
+}

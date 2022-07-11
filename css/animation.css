@@ -1,0 +1,25 @@
+@keyframes lin{
+    0%{margin-left: -50vw;}
+    20%{margin-left: -40vw;}
+    40%{margin-left: -30vw;}
+    60%{margin-left: -20vw;}
+    80%{margin-left: -10vw;}
+    100%{margin-left: auto;}
+}
+
+.lin {
+    animation: lin 0.2s 1;
+}
+
+@keyframes rin{
+    0%{margin-left: 50vw;}
+    20%{margin-left: 40vw;}
+    40%{margin-left: 30vw;}
+    60%{margin-left: 20vw;}
+    80%{margin-left: 10vw;}
+    100%{margin-left: auto;}
+}
+
+.rin {
+    animation: rin 0.2s 1;
+}

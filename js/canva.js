@@ -91,3 +91,59 @@ setInterval(function() {
     for (var e in elements)
         elements[e].draw(ctx, time);
 }, 10);
+
+function listcolor(){
+    let r = color[0]
+    let g = color[1]
+    let b = color[2]
+
+    color.sort(function(first, second){
+        return first - second;
+    });
+
+    num = color[0] + color[2];
+
+    if(num <= 255){
+        num += 30
+        s = -50
+    } else {
+        num -= 30
+        s = 50
+    }
+
+    if(r == g && r == b) {
+        r = 255 - r;
+        g = 255 - g;
+        b = 255 - b;
+        $("#container ul li").css("color",`rgb(${r},${g},${b})`)
+        $("#container a").css("color",`rgb(${r},${g},${b})`)
+        $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
+    } else {
+        r = num - r;
+        g = num - g;
+        b = num - b;
+        // $("#container ul li").css("color",`rgb(${r},${g},${b})`)
+        // $("#container a").css("color",`rgb(${r},${g},${b})`)
+        $("#container ul li").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
+        $("#container a").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
+        $("#body5 button").css({"background-color":`rgb(${color[0]-30},${color[1]-30},${color[2]-30})`,"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
+        $("#body5 button").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
+    }
+
+    console.log(r,g,b)
+}
+
+$(function() {
+
+    $("#body5 button").hover(function() {
+  
+      // カーソルが当たった時の処理
+      $(this).css("background-color",`rgb(${color[0]},${color[1]},${color[2]})`);
+  
+    }, function() {
+  
+      // カーソルが離れた時の処理
+      $(this).css("background-color",`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`);
+  
+    });
+  });
