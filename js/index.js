@@ -103,11 +103,12 @@ $(function() {
         alert(JSON.stringify(jqXHR.responseJSON, null, 2));
     });
 });
- 
+
 function toForm() {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform', '_blank')
 }
 
+// ランキング切り替えボタン
 function left() {
     var now = $(".show").attr("id").replace("item","");
     now = Number(now)
@@ -122,6 +123,7 @@ function left() {
     console.log(now)
 }
 
+// ランキング切り替えボタン
 function right() {
     var now = $(".show").attr("id").replace("item","");
     now = Number(now)

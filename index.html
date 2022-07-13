@@ -48,32 +48,33 @@
 
     <section id="body1">
         <h1>Disk Jockey Hiroshima</h1>
+        <h2>What's now?</h2>
         <div class="iframe-wrapper">
             <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="videoplayer"></iframe>
         </div>
         <div id="TitleText"></div>
 
     </section>
-    <section id="body2">
-        <div class="disc" onclick="location.reload();">
+    <section id="body2" class="disc">
+        <div onclick="location.reload();">
             <img class="icom" src="./imgs/icon.png">
         </div>
     </section>
-    <section id="body3">
-        <div class="disc" onclick="location.reload();">
+    <section id="body3" class="disc">
+        <div onclick="location.reload();">
             <img class="icom" src="./imgs/icon.png">
         </div>
     </section>
 
     <!-- 広告（takeover.run） -->
     <section id="body4" class="ad">
-        <p>Naoya Murao の広告</p>
         <a href="http://takeover.run/" target="_blank" rel="noopener noreferrer"><img src="#" alt="TAKEOVER"></a>
+        <p>Naoya Murao の広告</p>
     </section>
 
     <!-- ランキング -->
     <section id="body5">
-        <h2>人気の楽曲</h2>
+        <h2>Ranking</h2>
         <button onclick="left()">&lt;</button>
         <button onclick="right()">&gt;</button>
         <div id="container">
@@ -83,25 +84,25 @@
 
     <!-- 広告（nagito.work） -->
     <section id="body6" class="ad">
-        <p>デベロッパーの広告</p>
         <a href="https://nagito.work/" target="_blank" rel="noopener noreferrer"><img src="#" alt="nagito.work"></a>
+        <p>デベロッパーの広告</p>
     </section>
 
     <!-- 再生リスト埋め込み -->
     <section id="body7">
-        <p>hogehoge</p>
+        <h2>Playlist</h2>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PL_4pJ_uicVVCt4fAalEl6RLGr1kxzb2in" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
     <!-- 広告（goolgle） -->
     <section id="body8" class="ad">
-        <p>goolgleの広告</p>
         <a href="https://bit.ly/g_o_o_g_l_e_" target="_blank" rel="noopener noreferrer"><img src="./imgs/goolgle.png" alt="Goolgle"></a>
+        <p>goolgleの広告</p>
     </section>
 
     <!-- フォーム埋め込み -->
     <section id="body9">
-        <p> DJHの楽曲申請はこちらから</p>
-
+        <h2>Form</h2>
 
         <!-- 回答後ページ表示
         <script type="text/javascript">
@@ -118,11 +119,12 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" frameborder="0" id="form"></iframe> -->
         
         <!-- DJHフォーム（アドレス収集のためページ遷移する / 求回避方法） -->
-        <!-- <form action="https://script.google.com/macros/s/AKfycbxma7wgd2RNbtxwG9fF1B3Vif7FypRQJg4oF7zsT3Xi__Ne5577X1dh61fjsmKcJ7xA/exec" method="POST" onsubmit="submitted=true;">
+        <form action="https://script.google.com/macros/s/AKfycbxuznnrGz_6T7QWcEot5zQHwa0KJiY-tRJZe8tRhHeJ4pOiYQH_i9XGmFgr4ebev3nF/exec" method="POST" onsubmit="submitted=true;">
             <input type="text" name="url" id="url-field" required>
             <input type="text" name="mail" id="mail" required>
             <input type="submit" value="done">
-        </form> -->
+        </form>
+        
         <button onclick="toForm()" id="btn">
             フォームを送信する
         </button>
@@ -130,18 +132,16 @@
 
     <!-- 広告（スワれる） -->
     <section id="body10" class="ad">
+        <a href="https://n-highschool.slack.com/app_redirect?channel=スワれる_help"><img src="#" alt="質問は#スワれる_helpにて"></a>
         <p>スワれるの広告</p>
-        <p>どこへのリンクつける？？？？</p>
     </section>
 
     <!-- フッター -->
-    <section id="footer">
-        <div>
-            <p>hogehoge</p>
-            <p>&copy; 2022 Nagito All Rights Reserved.</p>
-            <p>DJHに関する質問は<a href="https://n-highschool.slack.com/app_redirect?channel=djh" target="_parent">#djh</a>にて</p>
-        </div>
-    </section>
+    <footer>
+        <p>hogehoge</p>
+        <p>&copy; 2022 Nagito All Rights Reserved.</p>
+        <p>DJHに関する質問は<a href="https://n-highschool.slack.com/app_redirect?channel=djh" target="_parent">#djh</a>にて</p>
+    </footer>
 </body>
 <script src="./js/index.js" type="text/javascript"></script>
 <script src="./js/canva.js" type="text/javascript"></script>

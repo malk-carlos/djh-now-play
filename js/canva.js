@@ -115,35 +115,38 @@ function listcolor(){
         r = 255 - r;
         g = 255 - g;
         b = 255 - b;
-        $("#container ul li").css("color",`rgb(${r},${g},${b})`)
-        $("#container a").css("color",`rgb(${r},${g},${b})`)
-        $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
+        // $("#container ul li").css("color",`rgb(${r},${g},${b})`)
+        // $("#container a").css("color",`rgb(${r},${g},${b})`)
+        $("*").css("color",`rgb(${r},${g},${b})`)
+        // $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
+        $("#body5 button").css({"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
+        $(".ad p").css("text-shadow","none")
     } else {
         r = num - r;
         g = num - g;
         b = num - b;
-        // $("#container ul li").css("color",`rgb(${r},${g},${b})`)
-        // $("#container a").css("color",`rgb(${r},${g},${b})`)
-        $("#container ul li").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
-        $("#container a").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
-        $("#body5 button").css({"background-color":`rgb(${color[0]-30},${color[1]-30},${color[2]-30})`,"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
-        $("#body5 button").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
+        // $("#container ul li").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
+        // $("#container a").css("text-shadow",`1px 1px 3px rgb(${r + s},${g + s},${b + s})`)
+        $("*").css("text-shadow",`1px 1px 3px rgb(${r},${g},${b})`)
+        // $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
+        $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
+        $(".ad p").css("text-shadow","none")
     }
 
     console.log(r,g,b)
 }
 
-$(function() {
+// $(function() {
 
-    $("#body5 button").hover(function() {
+//     $("#body5 button").hover(function() {
   
-      // カーソルが当たった時の処理
-      $(this).css("background-color",`rgb(${color[0]},${color[1]},${color[2]})`);
+//       // カーソルが当たった時の処理
+//       $(this).css("background-color",`rgb(${color[0]},${color[1]},${color[2]})`);
   
-    }, function() {
+//     }, function() {
   
-      // カーソルが離れた時の処理
-      $(this).css("background-color",`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`);
+//       // カーソルが離れた時の処理
+//       $(this).css("background-color",`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`);
   
-    });
-  });
+//     });
+//   });

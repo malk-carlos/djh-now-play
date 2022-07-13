@@ -1,19 +1,19 @@
 /* 960px以上に適用されるCSS（PC用） */
+* {
+    /* user-select: none; */
+    color: #fff;
+}
+::-webkit-scrollbar{
+    display: none;
+}
 html,
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     text-align: center;
     overflow-x: hidden;
-}
-a {
-    color: white;
-}
-
-p {
-    text-shadow: 1px 1px 0 #fff8, 0 0 3px #fff8;
 }
 #canvas {
     position: fixed;
@@ -22,6 +22,7 @@ p {
     width: 100%;
     height: 100%;
     background: #04BBD3;
+    overflow-x: hidden;
 }
 #header {
     position: absolute;
@@ -56,7 +57,7 @@ p {
 #body1 h1 {
     font-family: 'Fascinate', cursive;
     font-size: 48px;
-    margin: 72px auto 60px;
+    margin: 60px auto 10px;
 }
 #body2 {
     position: absolute;
@@ -86,12 +87,16 @@ p {
 }
 .ad{ /* 広告 */
     position: sticky;
+    margin: 30px auto;
     /* width: 100%; */
     /* height: 20px; */
 }
 .ad img {
     width: 30%;
     height: auto;
+}
+.ad p {
+    color: #888;
 }
 #body5 { /* ランキング */
     position: sticky;
@@ -100,12 +105,16 @@ p {
     /* overflow-y: scroll; */
     vertical-align: middle;
     text-align: left;
-    margin-top: 50px;
+    margin: 50px auto 100px;
+    background-color: #8888;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 #body5 h2 {
     /* width: 50%; */
     display: inline-block;
     margin: auto 30% auto 25%;
+    color: #fff;
 }
 #body5 button {
     display: inline-block;
@@ -114,6 +123,14 @@ p {
     width: 50px;
     height: 50px;
     font-size: 30px;
+    background-color: #fff8;
+    color: #fff;
+    transition: 0.2s;
+}
+#body5 button:hover {
+    background-color: #fff1;
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 #body5 button:active {
     opacity: 0.5;
@@ -137,8 +154,6 @@ p {
     text-decoration: none;
     height: 50px;
     vertical-align: middle;
-    color: #fff;
-    text-shadow: 0 0 3px #fff8;
     /* font-weight: bold; */
 }
 .thli {
@@ -153,21 +168,17 @@ p {
     margin-left: 20px;
 }
 .thumb {
-    /* position: absolute; */
     width: 100%;
     height: auto;
-    /* transform: translateY(-10%); */
     margin-left: 10px;
 }
 #body7{ /* 再生リスト */
     position: sticky;
     width: 100%;
-    /* height: 500px; */
 }
 #body9{ /* フォーム埋め込み */ 
     position: sticky;
     width: 100%;
-    /* height: 1000px; */
 }
 #form {
     width: 50%;
@@ -179,30 +190,29 @@ p {
     width: 30%;
     height: auto;
 }
-#footer{
+footer{
     position: sticky;
     width: 100%;
-    height: 500px;
 }
 
 /* 共通箇所 */
 
 #loading {
-width: 100%;
-height: 100%;
-transition: all 1s;
-background-color: #0bd;
-/* 以下のコードを追加 */
-position: fixed;
-top: 0;
-left: 0;
-z-index: 9999;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    background-color: #0bd;
+    /* 以下のコードを追加 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }
 
 #loading img {
-margin-top: 15vw;
-animation: 5s linear rotation2 infinite;
-animation-timing-function: ease-in;
+    margin-top: 15vw;
+    animation: 5s linear rotation2 infinite;
+    animation-timing-function: ease-in;
 }
 
 @keyframes rotation2 {
