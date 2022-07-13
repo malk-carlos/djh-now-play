@@ -15,6 +15,10 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
+h2 {
+    color: #fff;
+    font-family: 'Fascinate', cursive;
+}
 #canvas {
     position: fixed;
     top: 0;
@@ -27,10 +31,24 @@ body {
 #header {
     position: absolute;
     top: 0;
-    background-color: #fff8;
+    background-color: #fffa;
     width: 100%;
     text-align: right;
     z-index: 9999;
+}
+#header h1 {
+    position: absolute;
+    left: 3%;
+    top: 0;
+    font-family: 'Fascinate', cursive;
+    font-size: 28px;
+    margin: 10px auto auto;
+    display: inline-block;
+}
+#header ul {
+    display: inline-block;
+    width: 50%;
+    margin-right: 10px;
 }
 #header ul li {
     display: inline-block;
@@ -54,10 +72,9 @@ body {
     z-index: 1;
     width: 100%;
 }
-#body1 h1 {
-    font-family: 'Fascinate', cursive;
-    font-size: 48px;
-    margin: 60px auto 10px;
+#body1 h2 {
+    font-size: 36px;
+    margin: 80px auto 50px;
 }
 #body2 {
     position: absolute;
@@ -114,7 +131,6 @@ body {
     /* width: 50%; */
     display: inline-block;
     margin: auto 30% auto 25%;
-    color: #fff;
 }
 #body5 button {
     display: inline-block;
@@ -188,7 +204,11 @@ body {
 }
 #btn {
     width: 30%;
-    height: auto;
+    height: 50px;
+    background-color: #fffa;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
 footer{
     position: sticky;

@@ -120,6 +120,8 @@ function listcolor(){
         $("*").css("color",`rgb(${r},${g},${b})`)
         // $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
         $("#body5 button").css({"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
+        $("#btn").css({"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
+        $("h1").css({"color":`rgb(${r},${g},${b})`})
         $(".ad p").css("text-shadow","none")
     } else {
         r = num - r;
@@ -130,6 +132,8 @@ function listcolor(){
         $("*").css("text-shadow",`1px 1px 3px rgb(${r},${g},${b})`)
         // $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
         $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
+        $("#btn").css({"color":`rgb(${color[2]},${color[1]},${color[0]})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`,"text-shadow":"none"})
+        $("h1").css({"color":`rgb(${color[2]},${color[1]},${color[0]})`,"text-shadow":"none"})
         $(".ad p").css("text-shadow","none")
     }
 

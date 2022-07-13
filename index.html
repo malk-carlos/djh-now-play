@@ -36,6 +36,7 @@
     </div>
 
     <section id="header">
+        <h1>Disk Jockey Hiroshima</h1>
         <ul>
             <li><a href="#body1">再生中</a></li>
             <li><a href="#body4">ランキング</a></li>
@@ -47,7 +48,6 @@
     <!-- 再生中（トップページ）遷移メニュー欲しい -->
 
     <section id="body1">
-        <h1>Disk Jockey Hiroshima</h1>
         <h2>What's now?</h2>
         <div class="iframe-wrapper">
             <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="videoplayer"></iframe>
@@ -119,14 +119,14 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" frameborder="0" id="form"></iframe> -->
         
         <!-- DJHフォーム（アドレス収集のためページ遷移する / 求回避方法） -->
-        <form action="https://script.google.com/macros/s/AKfycbxuznnrGz_6T7QWcEot5zQHwa0KJiY-tRJZe8tRhHeJ4pOiYQH_i9XGmFgr4ebev3nF/exec" method="POST" onsubmit="submitted=true;">
+        <!-- <form action="https://script.google.com/macros/s/AKfycbxuznnrGz_6T7QWcEot5zQHwa0KJiY-tRJZe8tRhHeJ4pOiYQH_i9XGmFgr4ebev3nF/exec" method="POST" onsubmit="submitted=true;">    
             <input type="text" name="url" id="url-field" required>
             <input type="text" name="mail" id="mail" required>
             <input type="submit" value="done">
-        </form>
+        </form> -->
         
         <button onclick="toForm()" id="btn">
-            フォームを送信する
+            送信はこちらから
         </button>
     </section>
 
