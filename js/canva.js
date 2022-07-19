@@ -93,13 +93,16 @@ setInterval(function() {
 }, 10);
 
 function listcolor(){
-    let r = color[0]
-    let g = color[1]
-    let b = color[2]
+    let r = color[0];
+    let g = color[1];
+    let b = color[2];
+    let rgb = `${color[0]},${color[1]},${color[2]}`;
 
     color.sort(function(first, second){
         return first - second;
     });
+
+    console.log(color)
 
     num = color[0] + color[2];
 
@@ -120,9 +123,13 @@ function listcolor(){
         $("*").css("color",`rgb(${r},${g},${b})`)
         // $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
         $("#body5 button").css({"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
-        $("#btn").css({"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
-        $("h1").css({"color":`rgb(${r},${g},${b})`})
+        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${r},${g},${b})`})
+        $("h1").css({"color":`rgb(${rgb})`})
+        $("#header li a").css({"color":`rgb(${rgb})`})
+        $("#header .tc ").css({"color":`rgb(${rgb})`})
         $(".ad p").css("text-shadow","none")
+
+        $("#stalker").css({"background-color":`rgba(${r},${g},${b},0.5)`}) // メモ：マウスストーカ色変更されない
     } else {
         r = num - r;
         g = num - g;
@@ -132,25 +139,14 @@ function listcolor(){
         $("*").css("text-shadow",`1px 1px 3px rgb(${r},${g},${b})`)
         // $("#body5 button").css({"background-color":`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`,"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
         $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
-        $("#btn").css({"color":`rgb(${color[2]},${color[1]},${color[0]})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`,"text-shadow":"none"})
-        $("h1").css({"color":`rgb(${color[2]},${color[1]},${color[0]})`,"text-shadow":"none"})
+        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`,"text-shadow":"none"})
+        $("h1").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
+        $("#header li a").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
+        $("#header .tc ").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
         $(".ad p").css("text-shadow","none")
+        
+        $("#stalker").css({"background-color":`rgba(${r + s},${g + s},${b + s}},0.5)`}) // メモ：マウスストーカ色変更されない
     }
 
     console.log(r,g,b)
 }
-
-// $(function() {
-
-//     $("#body5 button").hover(function() {
-  
-//       // カーソルが当たった時の処理
-//       $(this).css("background-color",`rgb(${color[0]},${color[1]},${color[2]})`);
-  
-//     }, function() {
-  
-//       // カーソルが離れた時の処理
-//       $(this).css("background-color",`rgb(${color[0]+30},${color[1]+30},${color[2]+30})`);
-  
-//     });
-//   });

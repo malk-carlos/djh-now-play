@@ -137,3 +137,40 @@ function right() {
     }
     console.log(now)
 }
+
+// ヘッダーまわり
+$(function(){
+    const topBtn = $('#header h1');
+    
+    // ◇ボタンをクリックしたら、スクロールして上に戻る
+    topBtn.click(function(){
+        $('body,html').animate({
+        scrollTop: 0},500);
+        return false;
+    });
+});
+
+// ツールチップ
+$(function(){
+    const c_before = $('.tcb');
+    const chip = $(".tc")
+
+    chip.hide();
+    
+    // c_before要素ホバーでツールチップ表示
+    c_before.hover(function(){
+        $(this).next().fadeIn();
+    },
+    function (){
+        $(this).next().hide();
+    })
+});
+
+ //マウスストーカー用のdivを取得
+const stalker = $("#stalker")
+
+//上記のdivタグをマウスに追従させる処理
+document.addEventListener('mousemove', function (e) {
+    // stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+    stalker.css('transform',`translate(${e.clientX}px,${e.clientY}px)`)
+});

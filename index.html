@@ -36,7 +36,8 @@
     </div>
 
     <section id="header">
-        <h1>Disk Jockey Hiroshima</h1>
+        <h1 onclick="top()" class="tcb">Disk Jockey Hiroshima</h1>
+        <p class="tc">ページトップに戻ります</p>
         <ul>
             <li><a href="#body1">再生中</a></li>
             <li><a href="#body4">ランキング</a></li>
@@ -53,22 +54,23 @@
             <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="videoplayer"></iframe>
         </div>
         <div id="TitleText"></div>
-
     </section>
     <section id="body2" class="disc">
-        <div onclick="location.reload();">
+        <div onclick="location.reload();" class="tcb">
             <img class="icom" src="./imgs/icon.png">
         </div>
+        <p class="tc">再読み込みします</p>
     </section>
     <section id="body3" class="disc">
-        <div onclick="location.reload();">
+        <div onclick="location.reload();" class="tcb">
             <img class="icom" src="./imgs/icon.png">
         </div>
+        <p class="tc">再読み込みします</p>
     </section>
 
     <!-- 広告（takeover.run） -->
     <section id="body4" class="ad">
-        <a href="http://takeover.run/" target="_blank" rel="noopener noreferrer"><img src="#" alt="TAKEOVER"></a>
+        <a href="http://takeover.run/" target="_blank" rel="noopener noreferrer"><img src="./imgs/takeover.png" alt="TAKEOVER"></a>
         <p>Naoya Murao の広告</p>
     </section>
 
@@ -84,7 +86,7 @@
 
     <!-- 広告（nagito.work） -->
     <section id="body6" class="ad">
-        <a href="https://nagito.work/" target="_blank" rel="noopener noreferrer"><img src="#" alt="nagito.work"></a>
+        <a href="https://nagito.work/" target="_blank" rel="noopener noreferrer"><img src="./imgs/nagito.png" alt="nagito.work"></a>
         <p>デベロッパーの広告</p>
     </section>
 
@@ -132,8 +134,8 @@
 
     <!-- 広告（スワれる） -->
     <section id="body10" class="ad">
-        <a href="https://n-highschool.slack.com/app_redirect?channel=スワれる_help"><img src="#" alt="質問は#スワれる_helpにて"></a>
-        <p>スワれるの広告</p>
+        <a href="https://n-highschool.slack.com/app_redirect?channel=スワれる_help"><img src="./imgs/suwareru.png" alt="質問は#スワれる_helpにて"></a>
+        <p>デベロッパーの広告</p>
     </section>
 
     <!-- フッター -->
@@ -142,6 +144,7 @@
         <p>&copy; 2022 Nagito All Rights Reserved.</p>
         <p>DJHに関する質問は<a href="https://n-highschool.slack.com/app_redirect?channel=djh" target="_parent">#djh</a>にて</p>
     </footer>
+    <div id="stalker"></div>
 </body>
 <script src="./js/index.js" type="text/javascript"></script>
 <script src="./js/canva.js" type="text/javascript"></script>
