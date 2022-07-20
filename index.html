@@ -14,12 +14,13 @@
     <meta name="theme-color" content="#ff0000">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/index.css" media="screen and (min-width:960px)">
-    <link rel="stylesheet" type="text/css" href="./css/mobile.css" media="screen and (max-width:960px)">
-    <link rel="stylesheet" href="./css/animation.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" media="screen and (min-width:960px)">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css" media="screen and (max-width:960px)">
+    <link rel="stylesheet" href="./css/animation.css">
 
     <title>Disc Jockey Hiroshima [DJH]</title>
 </head>
@@ -42,7 +43,7 @@
             <li><a href="#body1">再生中</a></li>
             <li><a href="#body4">ランキング</a></li>
             <li><a href="#body6">再生リスト</a></li>
-            <li><a href="#body8">フォームの送信</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank">フォームの送信<i id="head-ex" class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
         </ul>
     </section>
 
@@ -70,6 +71,7 @@
 
     <!-- 広告（takeover.run） -->
     <section id="body4" class="ad">
+        <a href="http://takeover.run/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-xmark x"></i></a>
         <a href="http://takeover.run/" target="_blank" rel="noopener noreferrer"><img src="./imgs/takeover.png" alt="TAKEOVER"></a>
         <p>Naoya Murao の広告</p>
     </section>
@@ -86,6 +88,7 @@
 
     <!-- 広告（nagito.work） -->
     <section id="body6" class="ad">
+        <a href="https://nagito.work/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-xmark x"></i></a>
         <a href="https://nagito.work/" target="_blank" rel="noopener noreferrer"><img src="./imgs/nagito.png" alt="nagito.work"></a>
         <p>デベロッパーの広告</p>
     </section>
@@ -98,6 +101,7 @@
 
     <!-- 広告（goolgle） -->
     <section id="body8" class="ad">
+        <a href="https://bit.ly/g_o_o_g_l_e_" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-xmark x"></i></a>
         <a href="https://bit.ly/g_o_o_g_l_e_" target="_blank" rel="noopener noreferrer"><img src="./imgs/goolgle.png" alt="Goolgle"></a>
         <p>goolgleの広告</p>
     </section>
@@ -134,15 +138,22 @@
 
     <!-- 広告（スワれる） -->
     <section id="body10" class="ad">
-        <a href="https://n-highschool.slack.com/app_redirect?channel=スワれる_help"><img src="./imgs/suwareru.png" alt="質問は#スワれる_helpにて"></a>
+        <div><i class="fa-solid fa-xmark x"></i></div>
+        <a href="https://n-highschool.slack.com/app_redirect?channel=スワれる_help" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-xmark x"></i></a>
+        <a href="https://n-highschool.slack.com/app_redirect?channel=スワれる_help" target="_blank" rel="noopener noreferrer"><img src="./imgs/suwareru.png" alt="質問は#スワれる_helpにて"></a>
         <p>デベロッパーの広告</p>
     </section>
 
     <!-- フッター -->
     <footer>
-        <p>hogehoge</p>
-        <p>&copy; 2022 Nagito All Rights Reserved.</p>
+        <ul>
+            <li><a href="#body1">再生中</a></li>
+            <li><a href="#body4">ランキング</a></li>
+            <li><a href="#body6">再生リスト</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank">フォームの送信</a><i id="foot-ex" class="fa-solid fa-arrow-up-right-from-square"></i></li>
+        </ul>
         <p>DJHに関する質問は<a href="https://n-highschool.slack.com/app_redirect?channel=djh" target="_parent">#djh</a>にて</p>
+        <p id="copy">&copy; 2022 Nagito All Rights Reserved.</p>
     </footer>
     <div id="stalker"></div>
 </body>
