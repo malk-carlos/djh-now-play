@@ -1,7 +1,7 @@
 let color, imageURL
 const colorThief = new ColorThief();
 const img1 = document.getElementById("thumbnail");
-const API_URL = "https://script.google.com/macros/s/AKfycbxma7wgd2RNbtxwG9fF1B3Vif7FypRQJg4oF7zsT3Xi__Ne5577X1dh61fjsmKcJ7xA/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbyvcTmxkWbmDuBvYbqMyrbG9G3SzeXyYCTuBZugVJbIeXIf-Bp3rBKzA889qyUY3ql7/exec";
 let googleProxyURL = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
 img1.crossOrigin = 'Anonymous';
 
@@ -65,7 +65,7 @@ $(function() {
     })
     .done((data, textStatus, jqXHR) => {
         // APIの呼び出しが成功した場合
-        // console.log(data)
+        console.log(data)
         for(let a = 0; a < 6; a ++){
             const $hide = $(`<div id='item${String(a)}' class='item hide'></div>`)
             const $show = $(`<div id='item${String(a)}' class='item show'></div>`)
@@ -75,7 +75,7 @@ $(function() {
                     const $ul = $(`<ul class="ul${String(i)}"></ul>`);
                     $ul.appendTo($show)
                     // 各項目の設定
-                    $(`<li>${data[n].rank}位</li>`).appendTo($ul);
+                    $(`<li class="rank">${data[n].num}位</li>`).appendTo($ul);
                     $(`<li class="thli"><img src="https://i.ytimg.com/vi/${data[n].id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
                     $(`<li class="name"><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></li>`).appendTo($ul);
 
@@ -86,7 +86,7 @@ $(function() {
                     const $ul = $(`<ul class="ul${String(i)}"></ul>`);
                     $ul.appendTo($hide)
                     // 各項目の設定
-                    $(`<li>${data[n].rank}位</li>`).appendTo($ul);
+                    $(`<li class="rank">${data[n].num}位</li>`).appendTo($ul);
                     $(`<li class="thli"><img src="https://i.ytimg.com/vi/${data[n].id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
                     $(`<li class="name"><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></li>`).appendTo($ul);
 
@@ -174,3 +174,20 @@ document.addEventListener('mousemove', function (e) {
     // stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
     stalker.css('transform',`translate(${e.clientX}px,${e.clientY}px)`)
 });
+
+const closes = $("#close, #close i")
+const menus = $("#menu, #menu i")
+
+function menu(){
+    $('#header ul').css('display','inline-block');
+    menus.css('display','none');
+    closes.css('display','unset');
+    // $('header').css({'background-color':'#0bd','height':'100%'});
+};
+  
+function closeing(){
+    $('#header ul').css('display','none');
+    menus.css('display','unset');
+    closes.css('display','none');
+    // $('header').css({'background-color':'#eeed','height':'unset'});
+};

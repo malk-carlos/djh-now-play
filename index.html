@@ -41,13 +41,13 @@
         <p class="tc">ページトップに戻ります</p>
         <ul>
             <li><a href="#body1">再生中</a></li>
-            <li><a href="#body4">ランキング</a></li>
-            <li><a href="#body6">再生リスト</a></li>
+            <li><a href="#body5">ランキング</a></li>
+            <li><a href="#body7">再生リスト</a></li>
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank">フォームの送信<i id="head-ex" class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
         </ul>
+        <button id="menu" class="mobile" onclick="menu()"><i class="fa-solid fa-bars menu"></i></button>
+        <button id="close" class="mobile" onclick="closeing()"><i class="fa-solid fa-xmark menu"></i></button>
     </section>
-
-    <!-- 再生中（トップページ）遷移メニュー欲しい -->
 
     <section id="body1">
         <h2>What's now?</h2>
@@ -96,7 +96,9 @@
     <!-- 再生リスト埋め込み -->
     <section id="body7">
         <h2>Playlist</h2>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PL_4pJ_uicVVCt4fAalEl6RLGr1kxzb2in" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="iframe-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?controls=0&amp;list=PL_4pJ_uicVVCt4fAalEl6RLGr1kxzb2in" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </section>
 
     <!-- 広告（goolgle） -->
@@ -159,8 +161,5 @@
 </body>
 <script src="./js/index.js" type="text/javascript"></script>
 <script src="./js/canva.js" type="text/javascript"></script>
-
-<link rel="stylesheet" type="text/css" href="./css/index.css" media="screen and (min-width:960px)">
-<link rel="stylesheet" type="text/css" href="./css/mobile.css" media="screen and (max-width:960px)">
 
 </html>
