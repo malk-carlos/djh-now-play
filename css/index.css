@@ -203,8 +203,7 @@ h2 {
 #container {
     text-align: left;
     width: 50%;
-    margin-left: 20%;
-    margin: auto;
+    margin: 5% auto auto;
     /* display: inline-block; */
 }
 .item {
@@ -214,38 +213,61 @@ h2 {
 .hide {
     display: none;
 }
+#container ul {
+    margin-top: 3%;
+}
 #container ul li {
     display: inline-block;
+    position: relative;
     text-decoration: none;
     height: 50px;
-    vertical-align: middle;
-    /* font-weight: bold; */
 }
-#container ul li a {
-    text-decoration: none;
+#container ul li div {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .rank {
-    font-size: 28px;
-    margin-top: 25px;
-    /* transform: translateY(-50%); */
+    font-size: 150%;
+    width: 5%;
 }
 .thli {
-    width: 10%;
+    /* width: 10%; */
+    height: 100%;
     position: relative;
 }
 .name {
-    width: 60%;
-    white-space: nowrap;
+    width: 55%;
+}
+.name div {
+    margin-left: 20px;
+    font-size: 130%;
+    width: 100%;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
-    margin-left: 36px;
-    margin-top: 25px;
-    font-size: 28px;
+}
+.name a {
+    text-decoration: none;
 }
 .thumb {
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    height: 100%;
     margin-left: 10px;
+}
+#body5-1 {
+    display: block;
+    position: sticky;
+    width: 100%;
+    height: 80%;
+}
+#body5-1 h2 {
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+}
+video {
+    width: 640px;
 }
 #body7{ /* 再生リスト */
     position: sticky;

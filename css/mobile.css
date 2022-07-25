@@ -196,7 +196,7 @@ h2 {
     vertical-align: middle;
     text-align: left;
     background-color: #8888;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 #body5 h2 {
@@ -226,39 +226,71 @@ h2 {
 #container {
     text-align: left;
     width: 90%;
-    margin-left: 10%;
-    margin: auto;
+    margin: 1% auto auto;
     /* display: inline-block; */
 }
 .item {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 130%;
 }
 .hide {
     display: none;
 }
+#container ul {
+    margin-top: 1.5%;
+}
 #container ul li {
     display: inline-block;
+    position: relative;
     text-decoration: none;
     height: 50px;
-    vertical-align: middle;
-    /* font-weight: bold; */
+}
+#container ul li div {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.rank {
+    font-size: 100%;
+    width: 5%;
 }
 .thli {
-    width: 5%;
+    /* width: 10%; */
+    height: 100%;
     position: relative;
 }
 .name {
-    width: 60%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 45%;
+}
+.name div {
     margin-left: 20px;
+    font-size: 100%;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.name a {
+    text-decoration: none;
 }
 .thumb {
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    height: 100%;
     margin-left: 10px;
+}
+#body5-1 {
+    display: block;
+    position: sticky;
+    width: 100%;
+    height: 40%;
+}
+#body5-1 h2 {
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+}
+video {
+    width: 80%;
 }
 #body6 {
     height: 300px;

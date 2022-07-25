@@ -131,7 +131,7 @@ function listcolor(){
         $("footer li a").css({"color":`rgb(${rgb})`})
         $("footer p").css({"color":`rgb(${rgb})`})
         $("footer a").css({"color":`rgb(${rgb})`})
-        $(".x").css("text-shadow","none")
+        $(".x").css({"text-shadow":"none","color": "#0bd"})
 
         $("#stalker").css({"background-color":`rgba(${r},${g},${b},0.5)`}) // メモ：マウスストーカ色変更されない
     } else if(num >= 350) {

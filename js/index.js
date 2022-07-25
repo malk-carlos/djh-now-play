@@ -75,9 +75,9 @@ $(function() {
                     const $ul = $(`<ul class="ul${String(i)}"></ul>`);
                     $ul.appendTo($show)
                     // 各項目の設定
-                    $(`<li class="rank">${data[n].num}位</li>`).appendTo($ul);
+                    $(`<li class="rank"><div>${data[n].num}位</div></li>`).appendTo($ul);
                     $(`<li class="thli"><img src="https://i.ytimg.com/vi/${data[n].id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
-                    $(`<li class="name"><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></li>`).appendTo($ul);
+                    $(`<li class="name"><div><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></div></li>`).appendTo($ul);
 
                     // 要素の追加
                     $("#container").append($show);
@@ -86,9 +86,9 @@ $(function() {
                     const $ul = $(`<ul class="ul${String(i)}"></ul>`);
                     $ul.appendTo($hide)
                     // 各項目の設定
-                    $(`<li class="rank">${data[n].num}位</li>`).appendTo($ul);
+                    $(`<li class="rank"><div>${data[n].num}位</div></li>`).appendTo($ul);
                     $(`<li class="thli"><img src="https://i.ytimg.com/vi/${data[n].id}/hqdefault.jpg" class="thumb"></li>`).appendTo($ul);
-                    $(`<li class="name"><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></li>`).appendTo($ul);
+                    $(`<li class="name"><div><a href="https://youtube.com/watch?v=${data[n].id}" target="_blank" rel="noopener noreferrer">${data[n].name}</a></div></li>`).appendTo($ul);
 
                     // 要素の追加
                     $("#container").append($hide);
