@@ -37,16 +37,16 @@
     </div>
 
     <section id="header">
-        <h1 onclick="top()" class="tcb">Disk Jockey Hiroshima</h1>
-        <p class="tc">ページトップに戻ります</p>
+        <h1 onclick="top()" class="tcb wback">Disk Jockey Hiroshima</h1>
+        <p class="tc wback">ページトップに戻ります</p>
         <ul>
-            <li><a href="#body1">再生中</a></li>
-            <li><a href="#body5">ランキング</a></li>
-            <li><a href="#body7">再生リスト</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank">フォームの送信<i id="head-ex" class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            <li><a href="#body1" class="wback toB1">再生中</a></li>
+            <li><a href="#body5" class="wback toB5">ランキング</a></li>
+            <li><a href="#body7" class="wback toB7">再生リスト</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank" class="wback">フォームの送信<i id="head-ex" class="fa-solid fa-arrow-up-right-from-square wback"></i></a></li>
         </ul>
-        <button id="menu" class="mobile" onclick="menu()"><i class="fa-solid fa-bars menu"></i></button>
-        <button id="close" class="mobile" onclick="closeing()"><i class="fa-solid fa-xmark menu"></i></button>
+        <button id="menu" class="mobile wback" onclick="menu()"><i class="fa-solid fa-bars menu"></i></button>
+        <button id="close" class="mobile wback" onclick="closeing()"><i class="fa-solid fa-xmark menu"></i></button>
     </section>
 
     <section id="body1">
@@ -139,7 +139,7 @@
             <input type="submit" value="done">
         </form> -->
         
-        <button onclick="toForm()" id="btn">
+        <button onclick="toForm()" id="btn" class="wback">
             送信はこちらから
         </button>
     </section>
@@ -155,13 +155,13 @@
     <!-- フッター -->
     <footer>
         <ul>
-            <li><a href="#body1">再生中</a></li>
-            <li><a href="#body4">ランキング</a></li>
-            <li><a href="#body6">再生リスト</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank">フォームの送信</a><i id="foot-ex" class="fa-solid fa-arrow-up-right-from-square"></i></li>
+            <li><a href="#body1" class="wback toB1">再生中</a></li>
+            <li><a href="#body5" class="wback toB5">ランキング</a></li>
+            <li><a href="#body7" class="wback toB7">再生リスト</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank" class="wback">フォームの送信<i id="foot-ex" class="fa-solid fa-arrow-up-right-from-square wback"></i></a></li>
         </ul>
-        <p>DJHに関する質問は<a href="https://n-highschool.slack.com/app_redirect?channel=djh" target="_parent">#djh</a>にて</p>
-        <p id="copy">&copy; 2022 Nagito All Rights Reserved.</p>
+        <p class="wback">DJHに関する質問は<a href="https://n-highschool.slack.com/app_redirect?channel=djh" target="_parent" class="wback">#djh<i id="foot-ex" class="fa-solid fa-arrow-up-right-from-square wback"></i></a>にて</p>
+        <p id="copy" class="wback">&copy; 2022 Nagito All Rights Reserved.</p>
     </footer>
     <div id="stalker"></div>
 </body>

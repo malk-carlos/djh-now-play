@@ -138,14 +138,33 @@ function right() {
     console.log(now)
 }
 
-// ヘッダーまわり
+// スクロール遷移
 $(function(){
     const topBtn = $('#header h1');
+    const toB1 = $('.toB1');
+    const toB5 = $('.toB5');
+    const toB7 = $('.toB7');
+    const body5 = $('#body5').offset().top;
+    const body7 = $('#body7').offset().top;
     
-    // ◇ボタンをクリックしたら、スクロールして上に戻る
     topBtn.click(function(){
         $('body,html').animate({
+        scrollTop: 0},750);
+        return false;
+    });
+    toB1.click(function(){
+        $('body,html').animate({
         scrollTop: 0},500);
+        return false;
+    });
+    toB5.click(function(){
+        $('body,html').animate({
+        scrollTop: body5},500);
+        return false;
+    });
+    toB7.click(function(){
+        $('body,html').animate({
+        scrollTop: body7},500);
         return false;
     });
 });
@@ -166,14 +185,16 @@ $(function(){
     })
 });
 
- //マウスストーカー用のdivを取得
-const stalker = $("#stalker")
+$(function(){
+    //マウスストーカー用のdivを取得
+    const stalker = $("#stalker");
 
-//上記のdivタグをマウスに追従させる処理
-document.addEventListener('mousemove', function (e) {
-    // stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-    stalker.css('transform',`translate(${e.clientX}px,${e.clientY}px)`)
-});
+    //上記のdivタグをマウスに追従させる処理
+    document.addEventListener('mousemove', function (e) {
+        stalker.css('transform',`translate(${e.clientX}px,${e.clientY}px)`)
+    });
+})
+
 
 const closes = $("#close, #close i")
 const menus = $("#menu, #menu i")

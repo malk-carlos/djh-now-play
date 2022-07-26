@@ -93,10 +93,11 @@ setInterval(function() {
 }, 10);
 
 function listcolor(){
+
     let r = color[0];
     let g = color[1];
     let b = color[2];
-    let rgb = `${color[0]},${color[1]},${color[2]}`;
+    let rgb = `${color[0]},${color[1]},${color[2]}`; // rgb -> サムネイルから抽出した色 = 背景色
 
     color.sort(function(first, second){
         return first - second;
@@ -114,66 +115,71 @@ function listcolor(){
         s = 50
     }
 
-    if(r == g && r == b) {
+
+    if((r == g && r == b ) && (num >= 300)) { // 背景色白系の場合
+
         r = 255 - r;
         g = 255 - g;
         b = 255 - b;
-        $("*").css("color",`rgb(${r},${g},${b})`)
-        $("#body5 button").css({"color":`rgb(${r},${g},${b})`,"border":`solid 1px rgb(${r},${g},${b})`})
-        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${r},${g},${b})`})
-        $("h1").css({"color":`rgb(${rgb})`})
-        $("#header li a").css({"color":`rgb(${rgb})`})
-        $("#header .tc ").css({"color":`rgb(${rgb})`})
+        const trgb = `${r},${g},${b}` // t(turn)rgb ->背景色の補色
+        // const srgb = `${r+s},${g+s},${b+s}` // s(shadow)rgb -> rgbが濃い（暗い）色の場合薄く,薄い（明るい）色の場合濃くする
+
+        $("*").css("color",`rgb(${trgb})`)
+        $("#body5 button").css({"color":`rgb(${trgb})`,"border":`solid 1px rgb(${trgb})`})
+        $("#btn").css({"border":`solid 1px rgb(${trgb})`})
         $(".ad p").css("text-shadow","none")
-        $("#head-ex").css({"color":`rgb(${rgb})`})
-        $("#header button").css({"color":`rgb(${rgb})`})
-        $("#foot-ex").css({"color":`rgb(${rgb})`})
-        $("footer li a").css({"color":`rgb(${rgb})`})
-        $("footer p").css({"color":`rgb(${rgb})`})
-        $("footer a").css({"color":`rgb(${rgb})`})
         $(".x").css({"text-shadow":"none","color": "#0bd"})
+        $(".wback").css({"color":`${trgb}`})
+        $("#stalker").css({"background-color":`rgba(${trgb},0.5)`})
 
-        $("#stalker").css({"background-color":`rgba(${r},${g},${b},0.5)`}) // メモ：マウスストーカ色変更されない
-    } else if(num >= 350) {
+    } else if(r == g && r == b ) { // 背景色黒系
+
+        r = 255 - r;
+        g = 255 - g;
+        b = 255 - b;
+        const trgb = `${r},${g},${b}` // t(turn)rgb ->背景色の補色
+        // const srgb = `${r+s},${g+s},${b+s}` // s(shadow)rgb -> rgbが濃い（暗い）色の場合薄く,薄い（明るい）色の場合濃くする
+
+        $("*").css("color",`rgb(${trgb})`)
+        $("#body5 button").css({"color":`rgb(${trgb})`,"border":`solid 1px rgb(${trgb})`})
+        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${trgb})`})
+        $(".ad p").css("text-shadow","none")
+        $(".x").css({"text-shadow":"none","color": "#0bd"})
+        $(".wback").css({"color":`rgb(${rgb})`})
+        $("#stalker").css({"background-color":`rgba(${trgb},0.5)`})
+
+    } else if(num >= 350) { // 背景彩色（明るめ）
+
         r = num - r;
         g = num - g;
         b = num - b;
-        $("*").css("text-shadow",`1px 1px 3px rgb(${r},${g},${b})`)
-        $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
-        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $("h1").css({"color":`rgb(${rgb})`,"text-shadow":"1px 1px 0px #888888, 0px 0px 3px #666666"})
-        $("#header li a").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $("#header .tc ").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $(".ad p").css("text-shadow","none")
-        $("#head-ex").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $("#header button i").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $("#foot-ex").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $("footer li a").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $("footer p").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $("footer a").css({"color":`rgb(${rgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
-        $(".x").css("text-shadow","none")
+        const trgb = `${r},${g},${b}` // t(turn)rgb ->背景色の補色
+        const srgb = `${r+s},${g+s},${b+s}` // s(shadow)rgb -> rgbが濃い（暗い）色の場合薄く,薄い（明るい）色の場合濃くする
 
-        $("#stalker").css({"background-color":`rgba(${r + s},${g + s},${b + s}},0.5)`}) // メモ：マウスストーカ色変更されない
-    } else {
+        $("*").css("text-shadow",`1px 1px 3px rgb(${trgb})`)
+        $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${srgb})`,"border":`solid 1px rgb(${srgb})`})
+        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${srgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
+        $(".ad p").css("text-shadow","none")
+        $(".x").css("text-shadow","none")
+        $(".wback").css({"color":`rgb(${rgb})`,"text-shadow":`0.5px 0.5px 0px rgba(${srgb},0.5), 0px 0px 2px rgba(${srgb},0.5)`})
+        $("#stalker").css({"background-color":`rgba(${srgb},0.5)`})
+
+    } else { // 背景彩色(暗め)
+
         r = num - r;
         g = num - g;
         b = num - b;
-        $("*").css("text-shadow",`1px 1px 3px rgb(${r},${g},${b})`)
-        $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${r + s},${g + s},${b + s})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`})
-        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${r + s},${g + s},${b + s})`,"text-shadow":"none"})
-        $("h1").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $("#header li a").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $("#header .tc ").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $(".ad p").css("text-shadow","none")
-        $("#head-ex").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $("#header button i").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $("#foot-ex").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $("footer li a").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $("footer p").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $("footer a").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
-        $(".x").css("text-shadow","none")
+        const trgb = `${r},${g},${b}` // t(turn)rgb ->背景色の補色
+        const srgb = `${r+s},${g+s},${b+s}` // s(shadow)rgb -> rgbが濃い（暗い）色の場合薄く,薄い（明るい）色の場合濃くする
 
-        $("#stalker").css({"background-color":`rgba(${r + s},${g + s},${b + s}},0.5)`}) // メモ：マウスストーカ色変更されない
+        $("*").css("text-shadow",`1px 1px 3px rgb(${trgb})`)
+        $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${srgb})`,"border":`solid 1px rgb(${srgb})`})
+        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${srgb})`,"text-shadow":"none"})
+        $(".ad p").css("text-shadow","none")
+        $(".x").css("text-shadow","none")
+        $(".wback").css({"color":`rgb(${rgb})`,"text-shadow":"none"})
+        $("#stalker").css({"background-color":`rgba(${srgb},0.5)`})
+
     }
 
     console.log(r,g,b)
