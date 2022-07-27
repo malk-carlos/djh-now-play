@@ -56,7 +56,7 @@ h2 {
     height: 50px;
 }
 .tc {
-    position: sticky;
+    position: relative;
     display: inline-block;
 }
 #canvas {
@@ -135,7 +135,7 @@ h2 {
     display: none;
 }
 #body1 {
-    position: sticky;
+    position: relative;
     z-index: 1;
     height: 500px;
 }
@@ -169,7 +169,7 @@ h2 {
     animation: 5s linear infinite rotation;
 }
 .ad{ /* 広告 */
-    position: sticky;
+    position: relative;
     width: 80%;
     height: 300px;
     margin-left: 10%;
@@ -189,7 +189,7 @@ h2 {
     margin: 10px 0 0;
 }
 #body5 { /* ランキング */
-    position: sticky;
+    position: relative;
     width: 100%;
     height: 400px;
     /* overflow-y: scroll; */
@@ -281,7 +281,7 @@ h2 {
 }
 #body5-1 {
     display: block;
-    position: sticky;
+    position: relative;
     width: 100%;
     height: 40%;
 }
@@ -300,12 +300,12 @@ video {
     top: 110px;
 }
 #body7{
-    position: sticky;
+    position: relative;
     width: 100%;
     height: 400px;
 }
 #body9{
-    position: sticky;
+    position: relative;
     width: 100%;
     height: 200px;
 }
