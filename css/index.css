@@ -1,7 +1,24 @@
 /* 960px以上に適用されるCSS（PC用） */
+@font-face {
+    font-family: "genju_li";
+    src: url("../fonts/genju_l.woff2") format("woff2"),
+    url("../fonts/genju_l.woff") format("woff");
+}
+@font-face {
+    font-family: "genju_mid";
+    src: url("../fonts/genju_mid.woff2") format("woff2"),
+    url("../fonts/genju_mid.woff") format("woff");
+}
+@font-face {
+    font-family: "corp";
+    src: url("../fonts/corp.woff2") format("woff2"),
+    url("../fonts/corp.woff") format("woff");
+}
 * {
     user-select: none;
     color: #fff;
+    font-family: "genju_mid";
+    font-weight: lighter;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -93,6 +110,11 @@ h2 {
     margin-left: 5px;
     border: none;
 }
+.ex {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f35d";
+}
 #body0 {
     display: block;
     height: 1px;
@@ -148,6 +170,7 @@ h2 {
 .ad{ /* 広告 */
     position: relative;
     height: 300px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .x {
     color: #0bd;
@@ -165,6 +188,7 @@ h2 {
 }
 .ad p {
     color: #888;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #body5 { /* ランキング */
     position: relative;
@@ -191,6 +215,7 @@ h2 {
     background-color: #fff8;
     color: #fff;
     transition: 0.2s;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #body5 button:hover {
     background-color: #fff1;
