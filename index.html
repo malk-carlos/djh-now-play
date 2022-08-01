@@ -54,26 +54,32 @@
         <button onclick="debag()">
             デバッグ用（フォント切替）
         </button>
-        <span id="debag">源柔X midium（weight:lighter;）</span>
+        <span id="debag">現在のフォント表示</span>
         <script>
             let i = 0
             function debag(){
                 if(i == 0){
-                    $("*:not('h2,h1,.ad,.x,.ex')").css({"font-family":"corp"})
-                    $("*:not('h2,h1,.ad,.x,.ex')").css({"font-weight":"unset"})
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"corp"})
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"unset"})
                     $("#debag").text("コーポレートロゴ")
                     i += 1
                 }
                 else if(i == 1){
-                    $("*:not('h2,h1,.ad,.x,.ex')").css({"font-family":"genju_li"})
-                    $("*:not('h2,h1,.ad,.x,.ex')").css({"font-weight":"bolder"})
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"genju_li"})
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"bolder"})
                     $("#debag").text("源柔X light")
                     i += 1
                 }
                 else if(i == 2){
-                    $("*:not('h2,h1,.ad,.x,.ex')").css({"font-family":"genju_mid"})
-                    $("*:not('h2,h1,.ad,.x,.ex')").css({"font-weight":"unset"})
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"genju_mid"})
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"unset"})
                     $("#debag").text("源柔X midium")
+                    i += 1
+                }
+                else if(i == 3){
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"unset"})
+                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"unset"})
+                    $("#debag").text("指定なし")
                     i = 0
                 }
             }

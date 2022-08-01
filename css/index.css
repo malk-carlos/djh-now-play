@@ -17,8 +17,8 @@
 * {
     user-select: none;
     color: #fff;
-    font-family: "genju_mid";
-    font-weight: lighter;
+    /* font-family: "genju_mid";
+    font-weight: lighter; */
 }
 ::-webkit-scrollbar{
     display: none;
