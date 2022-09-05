@@ -5,7 +5,7 @@ const API_URL = "https://script.google.com/macros/s/AKfycbyvcTmxkWbmDuBvYbqMyrbG
 let googleProxyURL = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2592000&url=';
 img1.crossOrigin = 'Anonymous';
 
-
+// 
 function customview() {
     let url = "https://sheets.googleapis.com/v4/spreadsheets/1e6bp_MizsC1qxmnmoIiOCx0rdFiZf8Vf3s1CpRIDIHE/values/get?key=AIzaSyBrH5j4PgNdtfAX4yM5_GUvSjeipA7j72M";
     return fetch(url)
@@ -42,9 +42,6 @@ function colorchange() {
 
 contents()
 window.onload = function() {
-
-    // document.addEventListener('touchmove', handle, { passive: false });
-    // document.addEventListener('mousewheel', handle, { passive: false });
     setTimeout(() => {
         const spinner = document.getElementById('loading');
         spinner.classList.add('loaded');
@@ -203,12 +200,10 @@ function menu(){
     $('#header ul').css('display','inline-block');
     menus.css('display','none');
     closes.css('display','unset');
-    // $('header').css({'background-color':'#0bd','height':'100%'});
 };
   
 function closeing(){
     $('#header ul').css('display','none');
     menus.css('display','unset');
     closes.css('display','none');
-    // $('header').css({'background-color':'#eeed','height':'unset'});
 };

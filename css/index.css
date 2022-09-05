@@ -32,6 +32,9 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
+section {
+    padding-bottom: 50px;
+}
 .mobile {
     display: none;
 }
@@ -171,6 +174,7 @@ h2 {
     position: relative;
     height: 300px;
     font-family: Arial, Helvetica, sans-serif;
+    display: none;
 }
 .x {
     color: #0bd;
