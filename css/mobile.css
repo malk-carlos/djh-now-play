@@ -32,8 +32,8 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
-.mobile {
-    display: none;
+section:not(#header) {
+    padding-bottom: 100px;
 }
 #stalker {
     pointer-events: none;
@@ -82,7 +82,7 @@ h2 {
     left: 3%;
     top: 0;
     font-family: 'Fascinate', cursive;
-    font-size: 28px;
+    font-size: 20px;
     margin: 10px auto auto;
     display: inline-block;
     cursor: pointer;
@@ -152,11 +152,11 @@ h2 {
     position: absolute;
     top: 0;
     left: 10%;
-    width: 80%;
+    width: 70%;
     height: 80%;
 }
 #TitleText {
-    width: 80%;
+    width: 70%;
     margin-top: -30px;
     margin-left: 10%;
 }
@@ -170,9 +170,10 @@ h2 {
 }
 .ad{ /* 広告 */
     position: relative;
-    width: 80%;
+    width: 70%;
     height: 300px;
     margin-left: 10%;
+    display: none;
 }
 .x {
     color: #0bd;
@@ -290,7 +291,7 @@ h2 {
     padding-bottom: 2.5%;
 }
 video {
-    width: 80%;
+    width: 70%;
 }
 #body6 {
     height: 300px;
@@ -316,7 +317,7 @@ video {
     text-align: center;
 }
 #btn {
-    width: 80%;
+    width: 70%;
     height: 50px;
     background-color: #fffa;
     border-radius: 15px;
@@ -362,7 +363,7 @@ footer ul li a {
 }
 #copy {
     position: absolute;
-    width: 80%;
+    width: 70%;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);

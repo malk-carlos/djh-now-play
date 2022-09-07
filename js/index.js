@@ -26,9 +26,7 @@ function contents() {
     Promise.resolve(custom).then(function(customs) {
         document.getElementById('TitleText').innerHTML = "<a href='" + customs.values[0][3] + "'>" + customs.values[0][2] + "</a>";
         document.getElementById("videoplayer").src = "https://www.youtube.com/embed/" + customs.values[0][1];
-        //document.getElementById("thumbnail").src = "https://img.youtube.com/vi/" + customs.values[0][1] + "/maxresdefault.jpg";
         imageURL = "https://img.youtube.com/vi/" + customs.values[0][1] + "/maxresdefault.jpg";
-        console.log(imageURL)
         img1.src = googleProxyURL + imageURL;
     })
     document.getElementById('thumbnail').addEventListener("load", colorchange);
@@ -62,7 +60,6 @@ $(function() {
     })
     .done((data, textStatus, jqXHR) => {
         // APIの呼び出しが成功した場合
-        console.log(data)
         for(let a = 0; a < 6; a ++){
             const $hide = $(`<div id='item${String(a)}' class='item hide'></div>`)
             const $show = $(`<div id='item${String(a)}' class='item show'></div>`)
@@ -110,6 +107,7 @@ function left() {
     var now = $(".show").attr("id").replace("item","");
     now = Number(now)
 
+    // 左のページが存在すれば
     if(now - 1 >= 0) {
         $(".item").removeClass("lin lout rin rout")
         $(`#item${now-1}`).addClass("show lin")
@@ -117,7 +115,14 @@ function left() {
         $(`#item${now}`).removeClass("show")
         $(`#item${now}`).addClass("hide")
     }
-    console.log(now)
+    // 左端のページであれば
+    else {
+        $(".item").removeClass("lin lout rin rout")
+        $(`#item5`).addClass("show lin")
+        $(`#item5`).removeClass("hide")
+        $(`#item${now}`).removeClass("show")
+        $(`#item${now}`).addClass("hide")
+    }
 }
 
 // ランキング切り替えボタン
@@ -125,6 +130,7 @@ function right() {
     var now = $(".show").attr("id").replace("item","");
     now = Number(now)
 
+    // 右のページが存在すれば
     if(now + 1 <= 5) {
         $(".item").removeClass("lin lout rin rout")
         $(`#item${now+1}`).addClass("show rin")
@@ -132,7 +138,14 @@ function right() {
         $(`#item${now}`).removeClass("show")
         $(`#item${now}`).addClass("hide")
     }
-    console.log(now)
+    // 右端のページであれば
+    else {
+        $(".item").removeClass("lin lout rin rout")
+        $(`#item0`).addClass("show rin")
+        $(`#item0`).removeClass("hide")
+        $(`#item${now}`).removeClass("show")
+        $(`#item${now}`).addClass("hide")
+    }
 }
 
 // スクロール遷移
@@ -192,7 +205,7 @@ $(function(){
     });
 })
 
-
+// ハンバーガーメニュー ここから
 const closes = $("#close, #close i")
 const menus = $("#menu, #menu i")
 
@@ -207,3 +220,28 @@ function closeing(){
     menus.css('display','unset');
     closes.css('display','none');
 };
+// ここまで
+
+// フォント変更
+
+let fonti = 0
+function font(){
+    if(fonti == 0){
+        $("*:not('h2,h1,.ad p,.x,.ex,#f')").css({"font-family":"corp"})
+        $("*:not('h2,h1,.ad p,.x,.ex,#f')").css({"font-weight":"unset"})
+        $("#debag").text("コーポレートロゴ")
+        fonti += 1
+    }
+    else if(fonti == 1){
+        $("*:not('h2,h1,.ad p,.x,.ex,#f')").css({"font-family":"genju_li"})
+        $("*:not('h2,h1,.ad p,.x,.ex,#f')").css({"font-weight":"bolder"})
+        $("#debag").text("源柔X light")
+        fonti += 1
+    }
+    else if(fonti == 2){
+        $("*:not('h2,h1,.ad p,.x,.ex,#f')").css({"font-family":"genju_mid"})
+        $("*:not('h2,h1,.ad p,.x,.ex,#f')").css({"font-weight":"unset"})
+        $("#debag").text("源柔X midium")
+        fonti = 0
+    }
+}

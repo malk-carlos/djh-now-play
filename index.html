@@ -51,39 +51,6 @@
 
     <section id="body1">
         <h2>What's now?</h2>
-        <button onclick="debag()">
-            デバッグ用（フォント切替）
-        </button>
-        <span id="debag">現在のフォント表示</span>
-        <script>
-            let i = 0
-            function debag(){
-                if(i == 0){
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"corp"})
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"unset"})
-                    $("#debag").text("コーポレートロゴ")
-                    i += 1
-                }
-                else if(i == 1){
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"genju_li"})
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"bolder"})
-                    $("#debag").text("源柔X light")
-                    i += 1
-                }
-                else if(i == 2){
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"genju_mid"})
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"unset"})
-                    $("#debag").text("源柔X midium")
-                    i += 1
-                }
-                else if(i == 3){
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-family":"unset"})
-                    $("*:not('h2,h1,.ad p,.x,.ex')").css({"font-weight":"unset"})
-                    $("#debag").text("指定なし")
-                    i = 0
-                }
-            }
-        </script>
         <div class="iframe-wrapper">
             <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="videoplayer"></iframe>
         </div>
@@ -150,7 +117,7 @@
 
     <!-- フォーム埋め込み -->
     <section id="body9">
-        <h2>Form</h2>
+        <h2><span onclick="font()" class="pointer" id="f">F</span>orm</h2>
 
         <!-- 回答後ページ表示
         <script type="text/javascript">
