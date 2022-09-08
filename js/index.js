@@ -98,8 +98,15 @@ $(function() {
     });
 });
 
-function toForm() {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform', '_blank')
+// フォーム遷移
+function toForm(num) {
+    if (num == 1) {
+        // 1を渡されたら楽曲送信フォームを開く
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform', '_blank')
+    } else if (num == 2) {
+        // 2を渡されたらご意見ボックスを開く
+        window.open('https://docs.google.com/forms/d/e/1FAIpQLSdm-JFW0BkV9DNyNykU9bTKzfwejA21k12WTrNXTZUPnFxQ_Q/viewform', '_blank')
+    }
 }
 
 // ランキング切り替えボタン

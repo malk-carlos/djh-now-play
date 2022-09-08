@@ -43,7 +43,8 @@
             <li><a href="#body1" class="wback toB1">再生中</a></li>
             <li><a href="#body5" class="wback toB5">ランキング</a></li>
             <li><a href="#body7" class="wback toB7">再生リスト</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank" class="wback">フォームの送信<i id="head-ex" class="fa-solid fa-arrow-up-right-from-square wback ex"></i></a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank" class="wback">楽曲送信<i class="fa-solid fa-arrow-up-right-from-square wback ex head-ex"></i></a></li>
+            <li><a href="https://forms.gle/v1JZQF3NtuLfqoSx6" target="_blank" class="wback">ヘルプとフィードバック<i class="fa-solid fa-arrow-up-right-from-square wback ex head-ex"></i></a></li>
         </ul>
         <button id="menu" class="mobile wback" onclick="menu()"><i class="fa-solid fa-bars menu"></i></button>
         <button id="close" class="mobile wback" onclick="closeing()"><i class="fa-solid fa-xmark menu"></i></button>
@@ -117,7 +118,7 @@
 
     <!-- フォーム埋め込み -->
     <section id="body9">
-        <h2><span onclick="font()" class="pointer" id="f">F</span>orm</h2>
+        <h2><span onclick="font()" class="pointer" id="f">F</span>orms</h2>
 
         <!-- 回答後ページ表示
         <script type="text/javascript">
@@ -139,9 +140,11 @@
             <input type="text" name="mail" id="mail" required>
             <input type="submit" value="done">
         </form> -->
-        
-        <button onclick="toForm()" id="btn" class="wback">
-            送信はこちらから
+        <button onclick="toForm(1)" class="wback btn">
+            楽曲の申請はこちらから
+        </button>
+        <button onclick="toForm(2)" class="wback btn">
+            ご意見・ご質問はこちらから
         </button>
     </section>
 
@@ -159,10 +162,11 @@
             <li><a href="#body1" class="wback toB1">再生中</a></li>
             <li><a href="#body5" class="wback toB5">ランキング</a></li>
             <li><a href="#body7" class="wback toB7">再生リスト</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank" class="wback">フォームの送信<i id="foot-ex" class="fa-solid fa-arrow-up-right-from-square wback ex"></i></a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ1XH-6AX4wLjWhJJ5pkpHG381sHnq0WzB1OPgQkl0lQT9nw/viewform" target="_blank" class="wback">フォームの送信<i class="fa-solid fa-arrow-up-right-from-square wback ex foot-ex"></i></a></li>
+            <li><a href="https://forms.gle/v1JZQF3NtuLfqoSx6" target="_blank" class="wback">ヘルプとフィードバック<i class="fa-solid fa-arrow-up-right-from-square wback ex foot-ex"></i></a></li>
         </ul>
         <p class="wback">DJHに関する質問は<a href="https://n-highschool.slack.com/app_redirect?channel=djh" target="_parent" class="wback">#djh<i id="foot-ex" class="fa-solid fa-arrow-up-right-from-square wback ex"></i></a>にて</p>
-        <p id="copy" class="wback">&copy; 2022 Nagito All Rights Reserved.</p>
+        <p id="copy" class="wback">&copy; 2022 Nagito,Malk All Rights Reserved.</p>
     </footer>
     <div id="stalker"></div>
 </body>

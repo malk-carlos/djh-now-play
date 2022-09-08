@@ -75,7 +75,7 @@ h2 {
     width: 100%;
     height: 50px;
     text-align: right;
-    z-index: 998;
+    z-index: 999;
 }
 #header h1 {
     position: absolute;
@@ -137,28 +137,31 @@ h2 {
 #body1 {
     position: relative;
     z-index: 1;
-    height: 500px;
+    height: 350px;
 }
 #body1 h2 {
     padding-top: 50px;
 }
 .iframe-wrapper {
     position: relative;
-    margin: auto;
+    display: block;
+    margin: 0 auto;
     padding: calc(9 / 16 * 100%) 0 0;
 }
 .iframe-wrapper iframe {
     z-index: 1000;
     position: absolute;
     top: 0;
-    left: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     width: 70%;
-    height: 80%;
+    height: 70%;
+    z-index: 1;
 }
 #TitleText {
     width: 70%;
-    margin-top: -30px;
-    margin-left: 10%;
+    display: block;
+    margin: -50px auto 0;
 }
 #body2,
 #body3 {
@@ -192,18 +195,18 @@ h2 {
 #body5 { /* ランキング */
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 350px;
     /* overflow-y: scroll; */
     vertical-align: middle;
     text-align: left;
     background-color: #8888;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 #body5 h2 {
     /* width: 50%; */
     display: inline-block;
-    margin: auto 40% auto 10%;
+    margin: auto 40% auto 7%;
 }
 #body5 button {
     display: inline-block;
@@ -227,7 +230,7 @@ h2 {
 #container {
     text-align: left;
     width: 90%;
-    margin: 1% auto auto;
+    margin: 1% auto auto 3%;
     /* display: inline-block; */
 }
 .item {
@@ -254,7 +257,7 @@ h2 {
 }
 .rank {
     font-size: 100%;
-    width: 5%;
+    width: 7.5%;
 }
 .thli {
     /* width: 10%; */
@@ -283,8 +286,9 @@ h2 {
 #body5-1 {
     display: block;
     position: relative;
+    padding-top: 10%;
     width: 100%;
-    height: 40%;
+    height: 35%;
 }
 #body5-1 h2 {
     padding-top: 5%;
@@ -303,7 +307,7 @@ video {
 #body7{
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 200px;
 }
 #body9{
     position: relative;
@@ -316,21 +320,17 @@ video {
     margin: auto;
     text-align: center;
 }
-#btn {
+.btn {
     width: 70%;
     height: 50px;
     background-color: #fffa;
     border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
+    margin-top: 20px;
 }
-#btn:hover {
+.btn:active {
     background-color: #fffd;
-    transition: 0.2s;
-    transform: scale(1.015); /* ホバー時1.5%拡大 */
-}
-#btn:active {
-    background-color: #0000;
     transition: 0.1s;
 }
 footer{
@@ -338,29 +338,16 @@ footer{
     width: 100%;
     background-color: #fffa;
     margin: 0;
-    height: 200px;
+    height: 150px;
 }
 footer p {
-    margin: 0;
+    padding-top: 30px;
+    font-size: 0.9em;
 }
 footer ul {
-    display: inline-block;
-    width: 90%;
-    margin-right: 10px;
-    margin: 30px auto 30px;
+    display: none;
 }
-footer ul li {
-    display: inline-block;
-    margin-right: 5%;
-}
-footer ul li a {
-    color: #333;
-    text-decoration: none;
-}
-#foot-ex {
-    margin-left: 5px;
-    border: none;
-}
+
 #copy {
     position: absolute;
     width: 70%;

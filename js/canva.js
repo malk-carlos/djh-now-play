@@ -126,7 +126,7 @@ function listcolor(){
 
         $("*").css("color",`rgb(${trgb})`)
         $("#body5 button").css({"color":`rgb(${trgb})`,"border":`solid 1px rgb(${trgb})`})
-        $("#btn").css({"border":`solid 1px rgb(${trgb})`})
+        $(".btn").css({"border":`solid 1px rgb(${trgb})`})
         $(".ad p").css("text-shadow","none")
         $(".x").css({"text-shadow":"none","color": "#0bd"})
         $(".wback").css({"color":`${trgb}`})
@@ -142,7 +142,7 @@ function listcolor(){
 
         $("*").css("color",`rgb(${trgb})`)
         $("#body5 button").css({"color":`rgb(${trgb})`,"border":`solid 1px rgb(${trgb})`})
-        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${trgb})`})
+        $(".btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${trgb})`})
         $(".ad p").css("text-shadow","none")
         $(".x").css({"text-shadow":"none","color": "#0bd"})
         $(".wback").css({"color":`rgb(${rgb})`})
@@ -158,7 +158,7 @@ function listcolor(){
 
         $("*").css("text-shadow",`1px 1px 3px rgb(${trgb})`)
         $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${srgb})`,"border":`solid 1px rgb(${srgb})`})
-        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${srgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
+        $(".btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${srgb})`,"text-shadow":"0.5px 0.5px 0px #888888, 0px 0px 2px #666666"})
         $(".ad p").css("text-shadow","none")
         $(".x").css("text-shadow","none")
         $(".wback").css({"color":`rgb(${rgb})`,"text-shadow":`0.5px 0.5px 0px rgba(${srgb},0.5), 0px 0px 2px rgba(${srgb},0.5)`})
@@ -174,7 +174,7 @@ function listcolor(){
 
         $("*").css("text-shadow",`1px 1px 3px rgb(${trgb})`)
         $("#body5 button").css({"text-shadow":`1px 1px 3px rgb(${srgb})`,"border":`solid 1px rgb(${srgb})`})
-        $("#btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${srgb})`,"text-shadow":"none"})
+        $(".btn").css({"color":`rgb(${rgb})`,"border":`solid 1px rgb(${srgb})`,"text-shadow":"none"})
         $(".ad p").css("text-shadow","none")
         $(".x").css("text-shadow","none")
         $(".wback").css({"color":`rgb(${rgb})`,"text-shadow":"none"})

@@ -114,7 +114,7 @@ h2,#f {
     color: #333;
     text-decoration: none;
 }
-#head-ex {
+.head-ex {
     margin-left: 5px;
     border: none;
 }
@@ -314,21 +314,24 @@ video {
     margin: auto;
     text-align: center;
 }
-#btn {
+.btn {
     width: 30%;
     height: 50px;
     background-color: #fffa;
     border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
+    display: block;
+    margin: 30px auto;
 }
-#btn:hover {
+.btn:hover {
     background-color: #fffd;
     transition: 0.2s;
     transform: scale(1.015); /* ホバー時1.5%拡大 */
 }
-#btn:active {
-    background-color: #0000;
+.btn:active {
+    background-color: #fffa;
+    transform: scale(1);
     transition: 0.1s;
 }
 footer{
@@ -343,19 +346,21 @@ footer p {
 }
 footer ul {
     display: inline-block;
-    width: 50%;
-    margin-right: 10px;
+    width: 60%;
     margin: 30px auto 30px;
 }
 footer ul li {
     display: inline-block;
     margin-right: 5%;
 }
+footer ul li:hover {
+    text-decoration: underline;
+}
 footer ul li a {
     color: #333;
     text-decoration: none;
 }
-#foot-ex {
+.foot-ex {
     margin-left: 5px;
     border: none;
 }
